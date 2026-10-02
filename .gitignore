@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+
+# Build output
+client/dist/
+build/
+dist/
+
+# Secrets - never commit these
+.env
+.env.*
+!.env.example
+*.bak
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Uploads / scratch files
+uploads/
+server/cv-test.*
+server/ocr-test.png
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
