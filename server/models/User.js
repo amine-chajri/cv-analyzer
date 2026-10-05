@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
+const { TEMPLATE_SLUGS } = require('../config/templates');
 
 const userSchema = new mongoose.Schema(
   {
@@ -28,6 +29,13 @@ const userSchema = new mongoose.Schema(
       enum: ['user', 'admin'],
       default: 'user',
       index: true,
+    },
+    // Slug of the CV template the user picked from /templates.
+    // Null means "no preference yet" and is a valid, intentional state.
+    preferredTemplate: {
+      type: String,
+      enum: TEMPLATE_SLUGS,
+      default: null,
     },
   },
   { timestamps: true }

@@ -50,6 +50,18 @@ export default function Navbar() {
               >
                 History
               </NavLink>
+              <NavLink
+                to="/templates"
+                className={({ isActive }) =>
+                  `rounded-lg px-3 py-2 text-sm font-medium transition ${
+                    isActive
+                      ? 'bg-indigo-50 text-indigo-700'
+                      : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                  }`
+                }
+              >
+                Templates
+              </NavLink>
               {user.role === 'admin' && (
                 <NavLink
                   to="/admin"

@@ -56,9 +56,46 @@ export function AuthProvider({ children }) {
     setUser(null);
   }, []);
 
+  /**
+   * Saves the user's chosen CV template. Accepts a slug, or null to clear it.
+   * Optimistically updates local state, then persists via the API.
+   */
+  const setPreferredTemplate = useCallback(async (templateSlug) => {
+    const previous = getStoredUser();
+    const optimistic = { ...(previous || {}), preferredTemplate: templateSlug ?? null };
+    setStoredUser(optimistic);
+    setUser((current) => ({ ...(current || {}), preferredTemplate: templateSlug ?? null }));
+
+    try {
+      const { data } = await api.patch('/auth/preference', { templateSlug: templateSlug ?? null });
+      const confirmed = getStoredUser() || optimistic;
+      const next = { ...confirmed, preferredTemplate: data.data.preferredTemplate ?? null };
+      setStoredUser(next);
+      setUser((current) => ({ ...(current || {}), preferredTemplate: next.preferredTemplate }));
+      return { ok: true };
+    } catch (err) {
+      // Roll back to whatever we had before the optimistic write.
+      if (previous) setStoredUser(previous);
+      setUser((current) => ({
+        ...(current || {}),
+        preferredTemplate: previous?.preferredTemplate ?? null,
+      }));
+      return { ok: false, message: getErrorMessage(err) };
+    }
+  }, []);
+
   const value = useMemo(
-    () => ({ user, loading, error, setError, login, register, logout }),
-    [user, loading, error, login, register, logout]
+    () => ({
+      user,
+      loading,
+      error,
+      setError,
+      login,
+      register,
+      logout,
+      setPreferredTemplate,
+    }),
+    [user, loading, error, login, register, logout, setPreferredTemplate]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
