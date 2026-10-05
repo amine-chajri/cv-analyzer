@@ -21,10 +21,10 @@ if (!process.env.JWT_SECRET) {
   process.exit(1);
 }
 
-const xaiKey = (process.env.XAI_API_KEY || '').trim();
-if (!xaiKey || xaiKey.toLowerCase() === 'your_xai_api_key') {
+const groqKey = (process.env.GROQ_API_KEY || '').trim();
+if (!groqKey || groqKey.toLowerCase() === 'your_groq_api_key') {
   console.warn(
-    'WARNING: XAI_API_KEY is not set (or still the placeholder). CV scans will fail until you add a real key from https://console.x.ai'
+    'WARNING: GROQ_API_KEY is not set (or still the placeholder). CV scans will fail until you add a real key from https://console.groq.com/keys'
   );
 }
 

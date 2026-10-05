@@ -46,7 +46,7 @@ const scan = async (req, res, next) => {
       missingSkills: match.missingSkills,
       experienceCompatibility: match.experienceCompatibility,
       recommendations: match.recommendations,
-      aiModel: process.env.XAI_MODEL || 'grok-4.7',
+      aiModel: process.env.GROQ_MODEL || 'openai/gpt-oss-120b',
     });
 
     // 4. Return the saved analysis (without the raw CV text to keep payload light)

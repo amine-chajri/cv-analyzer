@@ -1,13 +1,18 @@
-/**
- * AI service backed by xAI (Grok) through its OpenAI-compatible REST API.
+﻿/**
+ * AI service backed by Groq through its OpenAI-compatible REST API.
  *
- * Endpoint : POST https://api.x.ai/v1/chat/completions
- * Model    : grok-4.7 (override with XAI_MODEL)
+ * Endpoint : POST https://api.groq.com/openai/v1/chat/completions
+ * Model    : openai/gpt-oss-120b (override with GROQ_MODEL)
  *
  * JSON output is enforced twice:
- *  1. Server side, with `response_format.type = "json_schema"` so Grok decodes
- *     tokens against the schema we send.
+ *  1. Server side, with `response_format.type = "json_schema"` + `strict: true`,
+ *     which uses constrained decoding on supported Groq models.
  *  2. Client side, with extractJson() which tolerates markdown fences.
+ *
+ * `strict: true` is only available on a subset of Groq models
+ * (openai/gpt-oss-20b, openai/gpt-oss-120b, qwen/qwen3.8-27b). The schema below
+ * already satisfies the strict requirements: every property is listed in
+ * `required` and every object sets `additionalProperties: false`.
  *
  * Every failure is normalised into an ApiError so the central error handler in
  * middleware/errorHandler.js can turn it into the standard { success, message }
@@ -16,29 +21,36 @@
 const axios = require('axios');
 const { ApiError } = require('../middleware/errorHandler');
 
-const XAI_BASE_URL = process.env.XAI_BASE_URL || 'https://api.x.ai/v1';
-const XAI_CHAT_URL = `${XAI_BASE_URL}/chat/completions`;
-const XAI_MODEL = process.env.XAI_MODEL || 'grok-4.7';
+const GROQ_BASE_URL = process.env.GROQ_BASE_URL || 'https://api.groq.com/openai/v1';
+const GROQ_CHAT_URL = `${GROQ_BASE_URL}/chat/completions`;
+const GROQ_MODEL = process.env.GROQ_MODEL || 'openai/gpt-oss-120b';
 
 const AI_TIMEOUT_MS = Number(process.env.AI_TIMEOUT_MS || 90000);
 const MAX_RETRIES = Number(process.env.AI_MAX_RETRIES ?? 2);
 const RETRY_BASE_DELAY_MS = 1500;
 
-// grok-4.7 is a reasoning model. Structured extraction does not need deep
-// reasoning, and "high" (the model default) adds latency for no benefit here.
-const REASONING_EFFORT = process.env.XAI_REASONING_EFFORT || 'low';
+// Groq defaults max_completion_tokens to 1024, which truncates these schemas.
+// Set it high enough for a full CV to come back.
+const MAX_COMPLETION_TOKENS = Number(process.env.AI_MAX_COMPLETION_TOKENS || 8192);
 
-// Some reasoning models reject a custom temperature, so it is opt-in only.
-const TEMPERATURE = process.env.XAI_TEMPERATURE ? Number(process.env.XAI_TEMPERATURE) : null;
+// GPT-OSS models are reasoning models. Structured extraction does not need deep
+// reasoning, and "high" (the model default) adds latency for no benefit here.
+// Only gpt-oss-20b/120b accept low|medium|high - sending it to a non-reasoning
+// model returns a 400, so it can be turned off with AI_REASONING_EFFORT=none.
+const REASONING_EFFORT_RAW = (process.env.AI_REASONING_EFFORT ?? 'low').trim().toLowerCase();
+const REASONING_EFFORT = REASONING_EFFORT_RAW && REASONING_EFFORT_RAW !== 'none' ? REASONING_EFFORT_RAW : null;
+
+// Some models reject a custom temperature, so it is opt-in only.
+const TEMPERATURE = process.env.GROQ_TEMPERATURE ? Number(process.env.GROQ_TEMPERATURE) : null;
 
 const MAX_RESUME_CHARS = 40000;
 const MAX_JD_CHARS = 20000;
 
-const PLACEHOLDER_KEYS = ['your_xai_api_key', 'xai-your-actual-api-key', ''];
+const PLACEHOLDER_KEYS = ['your_groq_api_key', 'gsk_your_key_here', 'your_xai_api_key', ''];
 const RETRYABLE_STATUS = new Set([408, 409, 425, 429, 500, 502, 503, 504]);
 
 // --- JSON Schemas -----------------------------------------------------------
-// xAI defaults `additionalProperties` to false, so it is set explicitly.
+// Groq strict mode requires `additionalProperties: false` on every object.
 
 const RESUME_SCHEMA = {
   type: 'object',
@@ -259,11 +271,11 @@ function truncate(value, max) {
 }
 
 function getApiKey() {
-  const key = (process.env.XAI_API_KEY || '').trim();
+  const key = (process.env.GROQ_API_KEY || '').trim();
   if (!key || PLACEHOLDER_KEYS.includes(key.toLowerCase())) {
     throw new ApiError(
       503,
-      'The xAI API key is missing. Add a valid XAI_API_KEY to server/.env (create one at https://console.x.ai) and restart the server.'
+      'The Groq API key is missing. Add a valid GROQ_API_KEY to server/.env (create one at https://console.groq.com/keys) and restart the server.'
     );
   }
   return key;
@@ -291,7 +303,7 @@ const asNumber = (value) => {
 /** Pulls a JSON object out of the model reply, tolerating markdown code fences. */
 function extractJson(content) {
   const raw = String(content ?? '').trim();
-  if (!raw) throw new Error('Grok returned an empty response');
+  if (!raw) throw new Error('Model returned an empty response');
 
   const unfenced = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
 
@@ -311,10 +323,10 @@ function extractJson(content) {
     }
   }
 
-  throw new Error('Grok returned invalid JSON');
+  throw new Error('Model returned invalid JSON');
 }
 
-/** Reads an error message out of an xAI/OpenAI error body, tolerating both shapes. */
+/** Reads an error message out of a Groq/OpenAI error body, tolerating both shapes. */
 function extractApiMessage(data) {
   if (!data || typeof data !== 'object') return '';
   if (data.error && typeof data.error === 'string') return data.error;
@@ -324,7 +336,7 @@ function extractApiMessage(data) {
   return typeof data.message === 'string' ? data.message : '';
 }
 
-/** Turns an axios/xAI failure into an ApiError with a message safe to show users. */
+/** Turns an axios/Groq failure into an ApiError with a message safe to show users. */
 function toApiError(err) {
   if (err instanceof ApiError) return err;
 
@@ -332,9 +344,10 @@ function toApiError(err) {
     const status = err.response?.status;
     const apiMessage = extractApiMessage(err.response?.data);
 
-    // xAI answers a bad key with 400 + "Incorrect API key provided", so the
-    // message has to be inspected before the status code is trusted.
-    const looksLikeKeyProblem = /api\s*key|unauthorized|invalid.*credential/i.test(apiMessage);
+    // Groq answers a bad key with 401, but some proxies rewrite it to 400, so
+    // the message is inspected before the status code is trusted.
+    const looksLikeKeyProblem = /api\s*key|unauthorized|invalid.*credential|authentication/i.test(apiMessage);
+    const looksLikeModelProblem = /model.*(not found|deprecat)|unknown model/i.test(apiMessage);
 
     if (err.code === 'ECONNABORTED' || err.code === 'ETIMEDOUT') {
       return new ApiError(504, 'The AI service took too long to respond. Please try again.');
@@ -342,17 +355,17 @@ function toApiError(err) {
     if (status === 401 || status === 403 || looksLikeKeyProblem) {
       return new ApiError(
         503,
-        'The xAI API key is missing or invalid. Check XAI_API_KEY in server/.env and restart the server.'
+        'The Groq API key is missing or invalid. Check GROQ_API_KEY in server/.env and restart the server.'
       );
     }
     if (status === 429) {
       return new ApiError(429, 'The AI service is rate limiting requests. Please wait a moment and try again.');
     }
-    if (status === 404) {
-      return new ApiError(502, `The AI model "${XAI_MODEL}" was not found. Check XAI_MODEL in server/.env.`);
+    if (status === 404 || looksLikeModelProblem) {
+      return new ApiError(502, `The AI model "${GROQ_MODEL}" was not found. Check GROQ_MODEL in server/.env.`);
     }
     if (status === 400) {
-      return new ApiError(502, `The AI request was rejected by xAI (${apiMessage || 'bad request'}).`);
+      return new ApiError(502, `The AI request was rejected by Groq (${apiMessage || 'bad request'}).`);
     }
     return new ApiError(502, 'The AI service is unavailable right now. Please try again.');
   }
@@ -370,18 +383,19 @@ const isRetryable = (err) => {
 };
 
 /**
- * Single POST to xAI chat completions with a schema-constrained JSON response.
+ * Single POST to Groq chat completions with a schema-constrained JSON response.
  * Retries transient failures with linear backoff.
  */
-async function callGrok({ systemPrompt, userPrompt, schemaName, schema }) {
+async function callModel({ systemPrompt, userPrompt, schemaName, schema }) {
   const apiKey = getApiKey();
 
   const body = {
-    model: XAI_MODEL,
+    model: GROQ_MODEL,
     messages: [
       { role: 'system', content: systemPrompt },
       { role: 'user', content: userPrompt },
     ],
+    max_completion_tokens: MAX_COMPLETION_TOKENS,
     response_format: {
       type: 'json_schema',
       json_schema: { name: schemaName, strict: true, schema },
@@ -396,7 +410,7 @@ async function callGrok({ systemPrompt, userPrompt, schemaName, schema }) {
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt += 1) {
     try {
-      const response = await axios.post(XAI_CHAT_URL, body, {
+      const response = await axios.post(GROQ_CHAT_URL, body, {
         headers: {
           Authorization: `Bearer ${apiKey}`,
           'Content-Type': 'application/json',
@@ -408,7 +422,7 @@ async function callGrok({ systemPrompt, userPrompt, schemaName, schema }) {
       const finishReason = choice?.finish_reason;
 
       if (finishReason === 'length') {
-        throw new Error('Grok response was truncated before the JSON was complete');
+        throw new Error('AI response was truncated before the JSON was complete');
       }
 
       return extractJson(choice?.message?.content);
@@ -419,7 +433,7 @@ async function callGrok({ systemPrompt, userPrompt, schemaName, schema }) {
     }
   }
 
-  console.error('[aiService] xAI request failed:', lastError?.message || lastError);
+  console.error('[aiService] Groq request failed:', lastError?.message || lastError);
   throw toApiError(lastError);
 }
 
@@ -437,7 +451,7 @@ async function analyzeResume(resumeText) {
     throw new ApiError(400, 'The CV text is too short to analyze. Please upload a readable CV.');
   }
 
-  const parsed = await callGrok({
+  const parsed = await callModel({
     systemPrompt: RESUME_SYSTEM_PROMPT,
     userPrompt: buildResumePrompt(text),
     schemaName: 'resume_analysis',
@@ -525,7 +539,7 @@ async function matchResumeWithJob(resumeText, jobDescription) {
     throw new ApiError(400, 'Job description is too short. Please paste the full posting (at least 50 characters).');
   }
 
-  const parsed = await callGrok({
+  const parsed = await callModel({
     systemPrompt: MATCH_SYSTEM_PROMPT,
     userPrompt: buildMatchPrompt(text, jd),
     schemaName: 'job_match',
