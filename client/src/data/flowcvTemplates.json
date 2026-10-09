@@ -1,0 +1,1035 @@
+[
+  {
+    "slug": "atlantic-blue-multi-column-sidebar-left",
+    "name": "Atlantic Blue",
+    "tags": [
+      "modern",
+      "popular",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/atlantic-blue-multi-column-sidebar-left.webp"
+  },
+  {
+    "slug": "classic-one-column-design-professionals",
+    "name": "Mercury Flow",
+    "tags": [
+      "modern",
+      "popular",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/classic-one-column-design-professionals.webp"
+  },
+  {
+    "slug": "steady-form",
+    "name": "Steady Form",
+    "tags": [
+      "simple",
+      "popular",
+      "photo"
+    ],
+    "design": "The Steady Form template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/steady-form.webp"
+  },
+  {
+    "slug": "classic-multi-column-serif-black-white",
+    "name": "Classic Serif",
+    "tags": [
+      "simple",
+      "popular"
+    ],
+    "design": "The Classic Serif template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/classic-multi-column-serif-black-white.webp"
+  },
+  {
+    "slug": "dark-leaves-multi-column-border-left",
+    "name": "Leaves",
+    "tags": [
+      "creative",
+      "popular",
+      "photo",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/dark-leaves-multi-column-border-left.webp"
+  },
+  {
+    "slug": "executive-serif-black-white",
+    "name": "Executive",
+    "tags": [
+      "simple",
+      "popular"
+    ],
+    "design": null,
+    "image": "/templates/executive-serif-black-white.webp"
+  },
+  {
+    "slug": "classic-clear",
+    "name": "Classic Clear",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Classic Clear template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/classic-clear.webp"
+  },
+  {
+    "slug": "true-blue",
+    "name": "True Blue",
+    "tags": [
+      "simple"
+    ],
+    "design": "The True Blue template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/true-blue.webp"
+  },
+  {
+    "slug": "editorial-rule",
+    "name": "Editorial Rule",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Editorial Rule template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/editorial-rule.webp"
+  },
+  {
+    "slug": "precision-line",
+    "name": "Precision Line",
+    "tags": [
+      "simple",
+      "compact"
+    ],
+    "design": "The Precision Line template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/precision-line.webp"
+  },
+  {
+    "slug": "silver-banner",
+    "name": "Silver Banner",
+    "tags": [
+      "simple",
+      "firstJob"
+    ],
+    "design": "The Silver Banner template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/silver-banner.webp"
+  },
+  {
+    "slug": "refined",
+    "name": "Refined",
+    "tags": [
+      "simple",
+      "photo"
+    ],
+    "design": "The Refined template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/refined.webp"
+  },
+  {
+    "slug": "condensed-rule",
+    "name": "Condensed Rule",
+    "tags": [
+      "simple",
+      "compact"
+    ],
+    "design": "The Condensed Rule template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/condensed-rule.webp"
+  },
+  {
+    "slug": "classic-portrait",
+    "name": "Classic Portrait",
+    "tags": [
+      "simple",
+      "photo"
+    ],
+    "design": "The Classic Portrait template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/classic-portrait.webp"
+  },
+  {
+    "slug": "corporate-resume-template",
+    "name": "Corporate",
+    "tags": [
+      "simple",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/corporate-resume-template.webp"
+  },
+  {
+    "slug": "classic-pure",
+    "name": "Classic Pure",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Classic Pure template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/classic-pure.webp"
+  },
+  {
+    "slug": "neutral-gray",
+    "name": "Neutral Gray",
+    "tags": [
+      "simple",
+      "compact"
+    ],
+    "design": "The Neutral Gray template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/neutral-gray.webp"
+  },
+  {
+    "slug": "even-line",
+    "name": "Even Line",
+    "tags": [
+      "simple",
+      "photo"
+    ],
+    "design": "The Even Line template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/even-line.webp"
+  },
+  {
+    "slug": "split-rule",
+    "name": "Split Rule",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Split Rule template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/split-rule.webp"
+  },
+  {
+    "slug": "mono-underline",
+    "name": "Mono Underline",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Mono Underline template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/mono-underline.webp"
+  },
+  {
+    "slug": "classic-slate",
+    "name": "Classic Slate",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Classic Slate template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/classic-slate.webp"
+  },
+  {
+    "slug": "pure-baseline",
+    "name": "Pure Baseline",
+    "tags": [
+      "simple",
+      "photo",
+      "firstJob"
+    ],
+    "design": "The Pure Baseline template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/pure-baseline.webp"
+  },
+  {
+    "slug": "classic-sans",
+    "name": "Classic Sans",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Classic Sans template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/classic-sans.webp"
+  },
+  {
+    "slug": "compact-serif",
+    "name": "Compact Serif",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Compact Serif template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/compact-serif.webp"
+  },
+  {
+    "slug": "fine-line",
+    "name": "Fine Line",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Fine Line template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/fine-line.webp"
+  },
+  {
+    "slug": "clean-slate",
+    "name": "Clean Slate",
+    "tags": [
+      "simple",
+      "compact"
+    ],
+    "design": "The Clean Slate template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/clean-slate.webp"
+  },
+  {
+    "slug": "clear-banner",
+    "name": "Clear Banner",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Clear Banner template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/clear-banner.webp"
+  },
+  {
+    "slug": "open-form",
+    "name": "Open Form",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Open Form template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/open-form.webp"
+  },
+  {
+    "slug": "quiet-focus",
+    "name": "Quiet Focus",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Quiet Focus template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/quiet-focus.webp"
+  },
+  {
+    "slug": "sage-line",
+    "name": "Sage Line",
+    "tags": [
+      "simple",
+      "firstJob"
+    ],
+    "design": "The Sage Line template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/sage-line.webp"
+  },
+  {
+    "slug": "compact-sans",
+    "name": "Compact Sans",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Compact Sans template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/compact-sans.webp"
+  },
+  {
+    "slug": "classic-ledger",
+    "name": "Classic Ledger",
+    "tags": [
+      "simple",
+      "compact"
+    ],
+    "design": "The Classic Ledger template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/classic-ledger.webp"
+  },
+  {
+    "slug": "simple-blush-multi-column-border",
+    "name": "Simple Blush",
+    "tags": [
+      "simple"
+    ],
+    "design": null,
+    "image": "/templates/simple-blush-multi-column-border.webp"
+  },
+  {
+    "slug": "quiet-blue",
+    "name": "Quiet Blue",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Quiet Blue template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/quiet-blue.webp"
+  },
+  {
+    "slug": "corporate-panel",
+    "name": "Corporate Panel",
+    "tags": [
+      "simple"
+    ],
+    "design": "The Corporate Panel template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/corporate-panel.webp"
+  },
+  {
+    "slug": "saffron-line",
+    "name": "Saffron Line",
+    "tags": [
+      "modern",
+      "compact",
+      "photo"
+    ],
+    "design": "The Saffron Line template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/saffron-line.webp"
+  },
+  {
+    "slug": "quicksilver-resume-template",
+    "name": "Quicksilver",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/quicksilver-resume-template.webp"
+  },
+  {
+    "slug": "professional-multi-column-business-experts",
+    "name": "Hunter Green",
+    "tags": [
+      "modern"
+    ],
+    "design": null,
+    "image": "/templates/professional-multi-column-business-experts.webp"
+  },
+  {
+    "slug": "cobalt-edge",
+    "name": "Cobalt Edge",
+    "tags": [
+      "modern",
+      "firstJob",
+      "photo"
+    ],
+    "design": "The Cobalt Edge template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/cobalt-edge.webp"
+  },
+  {
+    "slug": "atlantic-horizon",
+    "name": "Atlantic Horizon",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": "The Atlantic Horizon template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/atlantic-horizon.webp"
+  },
+  {
+    "slug": "obsidian-edge",
+    "name": "Obsidian Edge",
+    "tags": [
+      "modern"
+    ],
+    "design": "The Obsidian Edge template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/obsidian-edge.webp"
+  },
+  {
+    "slug": "neon-qr-code-multi-column-border",
+    "name": "Neon Green",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/neon-qr-code-multi-column-border.webp"
+  },
+  {
+    "slug": "atlantic-standard",
+    "name": "Atlantic Standard",
+    "tags": [
+      "modern"
+    ],
+    "design": "The Atlantic Standard template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/atlantic-standard.webp"
+  },
+  {
+    "slug": "hunter-green-multi-column-professional",
+    "name": "Sage Green",
+    "tags": [
+      "modern"
+    ],
+    "design": null,
+    "image": "/templates/hunter-green-multi-column-professional.webp"
+  },
+  {
+    "slug": "atlantic-crest",
+    "name": "Atlantic Crest",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": "The Atlantic Crest template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/atlantic-crest.webp"
+  },
+  {
+    "slug": "slate-focus",
+    "name": "Slate Focus",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": "The Slate Focus template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/slate-focus.webp"
+  },
+  {
+    "slug": "modern-two-column-designers",
+    "name": "Designer",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/modern-two-column-designers.webp"
+  },
+  {
+    "slug": "confident-grid",
+    "name": "Confident Grid",
+    "tags": [
+      "modern",
+      "compact",
+      "photo"
+    ],
+    "design": "The Confident Grid template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/confident-grid.webp"
+  },
+  {
+    "slug": "simply-blue-minimalistic-professionals",
+    "name": "Simply Blue",
+    "tags": [
+      "modern",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/simply-blue-minimalistic-professionals.webp"
+  },
+  {
+    "slug": "sandstone-dual",
+    "name": "Sandstone Dual",
+    "tags": [
+      "modern"
+    ],
+    "design": "The Sandstone Dual template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/sandstone-dual.webp"
+  },
+  {
+    "slug": "mercury-panel",
+    "name": "Mercury Panel",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": "The Mercury Panel template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/mercury-panel.webp"
+  },
+  {
+    "slug": "blue-steel-minimalist-professional-classic",
+    "name": "Blue Steel",
+    "tags": [
+      "modern",
+      "firstJob",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/blue-steel-minimalist-professional-classic.webp"
+  },
+  {
+    "slug": "lead-product-designer-ux-ui",
+    "name": "Olive Ash",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": "Admin-curated professional resume template for UX/UI designers. Premium design for product-focused roles.",
+    "image": "/templates/lead-product-designer-ux-ui.webp"
+  },
+  {
+    "slug": "royal-blue-two-column",
+    "name": "Royal Blue",
+    "tags": [
+      "modern"
+    ],
+    "design": null,
+    "image": "/templates/royal-blue-two-column.webp"
+  },
+  {
+    "slug": "minty-minimalistic-professional",
+    "name": "Minty",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/minty-minimalistic-professional.webp"
+  },
+  {
+    "slug": "azure-line",
+    "name": "Azure Line",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": "The Azure Line template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/azure-line.webp"
+  },
+  {
+    "slug": "charcoal-glow",
+    "name": "Charcoal Glow",
+    "tags": [
+      "modern",
+      "compact"
+    ],
+    "design": "The Charcoal Glow template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/charcoal-glow.webp"
+  },
+  {
+    "slug": "minimal-qr-code-professionals",
+    "name": "Cyan Grey",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/minimal-qr-code-professionals.webp"
+  },
+  {
+    "slug": "desert-rock-two-column-professional",
+    "name": "Desert Rock",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/desert-rock-two-column-professional.webp"
+  },
+  {
+    "slug": "calm-blue",
+    "name": "Calm Blue",
+    "tags": [
+      "modern"
+    ],
+    "design": "The Calm Blue template offers a simple design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/calm-blue.webp"
+  },
+  {
+    "slug": "slate-dawn",
+    "name": "Slate Dawn",
+    "tags": [
+      "modern"
+    ],
+    "design": "The Slate Dawn template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/slate-dawn.webp"
+  },
+  {
+    "slug": "blue-modern-resume-border",
+    "name": "Blue Classic",
+    "tags": [
+      "modern",
+      "photo",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/blue-modern-resume-border.webp"
+  },
+  {
+    "slug": "aem-developer-resume-template",
+    "name": "Evergreen Slate",
+    "tags": [
+      "modern",
+      "classic",
+      "photo"
+    ],
+    "design": "Admin-curated professional resume template for AEM Developers. Optimized for Adobe Experience Manager roles.",
+    "image": "/templates/aem-developer-resume-template.webp"
+  },
+  {
+    "slug": "sage-horizon",
+    "name": "Sage Horizon",
+    "tags": [
+      "modern"
+    ],
+    "design": "The Sage Horizon template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/sage-horizon.webp"
+  },
+  {
+    "slug": "elegant-minimalistic-professionals",
+    "name": "Pastel",
+    "tags": [
+      "modern",
+      "firstJob",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/elegant-minimalistic-professionals.webp"
+  },
+  {
+    "slug": "steel-two-column-ux-ui-designers",
+    "name": "Steel Grey",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/steel-two-column-ux-ui-designers.webp"
+  },
+  {
+    "slug": "elegant-hunter-green-multi-column",
+    "name": "Deep Forest",
+    "tags": [
+      "modern",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/elegant-hunter-green-multi-column.webp"
+  },
+  {
+    "slug": "minimalist-classic-professional",
+    "name": "Sea Pearl",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/minimalist-classic-professional.webp"
+  },
+  {
+    "slug": "minimalistic-classic-professionals",
+    "name": "Viola",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/minimalistic-classic-professionals.webp"
+  },
+  {
+    "slug": "warrior-red-multi-column-professional",
+    "name": "Warrior Red",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/warrior-red-multi-column-professional.webp"
+  },
+  {
+    "slug": "amethyst-edge",
+    "name": "Amethyst Edge",
+    "tags": [
+      "modern",
+      "compact"
+    ],
+    "design": "The Amethyst Edge template offers a modern design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/amethyst-edge.webp"
+  },
+  {
+    "slug": "accentuated-multi-column-red-highlights",
+    "name": "Accentuated Red",
+    "tags": [
+      "modern",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/accentuated-multi-column-red-highlights.webp"
+  },
+  {
+    "slug": "multi-column-elegant-border",
+    "name": "Opal Silk",
+    "tags": [
+      "modern"
+    ],
+    "design": null,
+    "image": "/templates/multi-column-elegant-border.webp"
+  },
+  {
+    "slug": "classic-simple-red-accent",
+    "name": "Red Accent",
+    "tags": [
+      "modern"
+    ],
+    "design": null,
+    "image": "/templates/classic-simple-red-accent.webp"
+  },
+  {
+    "slug": "professional-two-column-monochrome-design",
+    "name": "Frosted Teal",
+    "tags": [
+      "modern",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/professional-two-column-monochrome-design.webp"
+  },
+  {
+    "slug": "creative-multi-column-web-developer",
+    "name": "Happy",
+    "tags": [
+      "creative",
+      "photo",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/creative-multi-column-web-developer.webp"
+  },
+  {
+    "slug": "coral-navy",
+    "name": "Coral Navy",
+    "tags": [
+      "creative"
+    ],
+    "design": "The Coral Navy template offers a creative design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/coral-navy.webp"
+  },
+  {
+    "slug": "classic-elegant-border",
+    "name": "Flower",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/classic-elegant-border.webp"
+  },
+  {
+    "slug": "multi-column-design-marketing-assistants",
+    "name": "Black Pattern",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/multi-column-design-marketing-assistants.webp"
+  },
+  {
+    "slug": "creative-two-column-template",
+    "name": "Space",
+    "tags": [
+      "creative",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/creative-two-column-template.webp"
+  },
+  {
+    "slug": "minimalistic-grey-modern-simple",
+    "name": "Grey Goose",
+    "tags": [
+      "creative",
+      "photo",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/minimalistic-grey-modern-simple.webp"
+  },
+  {
+    "slug": "mint-line",
+    "name": "Mint Line",
+    "tags": [
+      "creative"
+    ],
+    "design": "The Mint Line template offers a creative design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/mint-line.webp"
+  },
+  {
+    "slug": "ultra-violet",
+    "name": "Ultra Violet",
+    "tags": [
+      "creative",
+      "photo"
+    ],
+    "design": "The Ultra Violet template offers a creative design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/ultra-violet.webp"
+  },
+  {
+    "slug": "emerald-mist",
+    "name": "Emerald Mist",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": "The Emerald Mist template offers a creative design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/emerald-mist.webp"
+  },
+  {
+    "slug": "classic-simple-blue-accent",
+    "name": "Blue Accent",
+    "tags": [
+      "creative"
+    ],
+    "design": null,
+    "image": "/templates/classic-simple-blue-accent.webp"
+  },
+  {
+    "slug": "blue-neon-multi-column-border-accents",
+    "name": "Blue Neon",
+    "tags": [
+      "creative",
+      "firstJob",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/blue-neon-multi-column-border-accents.webp"
+  },
+  {
+    "slug": "two-column-header-professional-layout",
+    "name": "Burgundy",
+    "tags": [
+      "creative"
+    ],
+    "design": null,
+    "image": "/templates/two-column-header-professional-layout.webp"
+  },
+  {
+    "slug": "multi-column-border-style",
+    "name": "Powder Blush",
+    "tags": [
+      "creative",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/multi-column-border-style.webp"
+  },
+  {
+    "slug": "plum-accent",
+    "name": "Plum Accent",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": "The Plum Accent template offers a creative design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/plum-accent.webp"
+  },
+  {
+    "slug": "stylish-two-column-web-developer",
+    "name": "Web Worker",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/stylish-two-column-web-developer.webp"
+  },
+  {
+    "slug": "classic-simple-green-accent",
+    "name": "Green Accent",
+    "tags": [
+      "creative"
+    ],
+    "design": null,
+    "image": "/templates/classic-simple-green-accent.webp"
+  },
+  {
+    "slug": "elegant-border-professional-template",
+    "name": "Swimming Pool",
+    "tags": [
+      "creative",
+      "photo",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/elegant-border-professional-template.webp"
+  },
+  {
+    "slug": "aqua-splash-multi-column-marketing",
+    "name": "Aqua Splash",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/aqua-splash-multi-column-marketing.webp"
+  },
+  {
+    "slug": "golden-mosaic",
+    "name": "Golden Mosaic",
+    "tags": [
+      "creative"
+    ],
+    "design": "The Golden Mosaic template offers a creative design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/golden-mosaic.webp"
+  },
+  {
+    "slug": "classic-green-minimal-border",
+    "name": "Green Frame",
+    "tags": [
+      "creative",
+      "photo"
+    ],
+    "design": "The Green Frame template offers a creative design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/classic-green-minimal-border.webp"
+  },
+  {
+    "slug": "minimalistic-gold-design-professionals",
+    "name": "Gold",
+    "tags": [
+      "creative",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/minimalistic-gold-design-professionals.webp"
+  },
+  {
+    "slug": "transparent-leaves",
+    "name": "Transparent Leaves",
+    "tags": [
+      "creative"
+    ],
+    "design": "The Transparent Leaves template offers a creative design that’s customizable and ATS-ready. Build your resume for free in minutes with FlowCV — unlimited PDF downloads, no watermarks, no hidden fees.",
+    "image": "/templates/transparent-leaves.webp"
+  },
+  {
+    "slug": "lavender-multi-column-creative-template",
+    "name": "Lavender",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/lavender-multi-column-creative-template.webp"
+  },
+  {
+    "slug": "classic-border-professional-look",
+    "name": "Rosewood",
+    "tags": [
+      "professional",
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/classic-border-professional-look.webp"
+  },
+  {
+    "slug": "dark-leaves-multi-column-elegant-design",
+    "name": "Dark Leaves",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/dark-leaves-multi-column-elegant-design.webp"
+  },
+  {
+    "slug": "monochrome-two-column-typewriter-style",
+    "name": "Typewriter",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/monochrome-two-column-typewriter-style.webp"
+  },
+  {
+    "slug": "dark-two-column-tech-professionals",
+    "name": "Almost Black",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/dark-two-column-tech-professionals.webp"
+  },
+  {
+    "slug": "minimalist-classic-professional-design",
+    "name": "Violetta",
+    "tags": [
+      "creative",
+      "photo"
+    ],
+    "design": null,
+    "image": "/templates/minimalist-classic-professional-design.webp"
+  },
+  {
+    "slug": "sunset-gradient-multi-column-design",
+    "name": "Sunset Gradient",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/sunset-gradient-multi-column-design.webp"
+  },
+  {
+    "slug": "free-multi-column-border-professionals",
+    "name": "Grenadine Red",
+    "tags": [
+      "creative",
+      "firstJob"
+    ],
+    "design": null,
+    "image": "/templates/free-multi-column-border-professionals.webp"
+  }
+]

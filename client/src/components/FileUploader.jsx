@@ -53,10 +53,8 @@ export default function FileUploader({ file, onChange, onError }) {
       onDrop={handleDrop}
       onDragOver={handleDragOver}
       onDragLeave={handleDragLeave}
-      className={`flex min-h-[180px] cursor-pointer flex-col items-center justify-center rounded-2xl border-2 border-dashed p-6 text-center transition ${
-        dragging
-          ? 'border-indigo-500 bg-indigo-50'
-          : 'border-slate-300 bg-slate-50 hover:border-indigo-400 hover:bg-indigo-50/50'
+      className={`flex min-h-[180px] cursor-pointer flex-col items-center justify-center rounded-pill border-2 border-border-soft p-6 text-center transition ${
+        dragging ? 'border-primary bg-primary/5' : 'border-slate-300 bg-slate-50 hover:border-primary/20'
       }`}
     >
       <input
@@ -69,20 +67,24 @@ export default function FileUploader({ file, onChange, onError }) {
 
       {file ? (
         <>
-          <div className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm">
-            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-100 text-lg">
+          <div
+            className="flex items-center gap-3 rounded-lg border border-hairline bg-white px-4 py-3"
+          >
+            <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
               📄
             </span>
             <div className="text-left">
-              <p className="max-w-[220px] truncate text-sm font-semibold text-slate-800">
+              <p className="max-w-[220px] truncate font-semibold text-ink">
                 {file.name}
               </p>
-              <p className="text-xs text-slate-500">{(file.size / 1024 / 1024).toFixed(2)} MB</p>
+              <p className="text-xs text-slate-500">
+                {(file.size / 1024 / 1024).toFixed(2)} MB
+              </p>
             </div>
             <button
               type="button"
               onClick={clearFile}
-              className="ml-2 rounded-lg px-2 py-1 text-sm text-slate-400 transition hover:bg-red-50 hover:text-red-600"
+              className="rounded-lg px-2 py-1 text-sm text-slate-400 transition hover:bg-red-50 hover:text-red-600"
               aria-label="Remove file"
             >
               ✕
@@ -92,14 +94,16 @@ export default function FileUploader({ file, onChange, onError }) {
         </>
       ) : (
         <>
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-100 text-2xl">
+          <div
+            className="flex h-12 w-12 items-center justify-center rounded-pill bg-primary/10 text-primary"
+          >
             ⬆️
           </div>
-          <p className="mt-3 text-sm font-semibold text-slate-700">
-            Drag &amp; drop your CV here, or click to browse
+          <p className="mt-3 font-semibold text-slate-700">
+            Drag & drop your CV here, or click to browse
           </p>
           <p className="mt-1 text-xs text-slate-500">
-            PDF, DOCX, image (PNG/JPG — we&apos;ll OCR it), or TXT · up to 10 MB
+            PDF, DOCX, image (PNG/JPG — we'll OCR it), or TXT · up to 10 MB
           </p>
         </>
       )}

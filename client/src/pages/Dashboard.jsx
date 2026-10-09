@@ -57,21 +57,26 @@ export default function Dashboard() {
   if (scanning) {
     return (
       <div className="mx-auto max-w-2xl px-4 py-20 text-center">
-        <div className="rounded-3xl border border-slate-200 bg-white p-12 shadow-xl shadow-slate-200/50">
-          <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center">
-            <div className="h-16 w-16 animate-spin rounded-full border-4 border-indigo-200 border-t-indigo-600" />
+        <section
+          className="rounded-none border border-surface-tile-1/50 bg-canvas p-12"
+          style={{ letterSpacing: '-0.374px' }}
+        >
+          <div className="mx-auto mb-8 flex h-20 w-20 items-center justify-center">
+            <div className="h-16 w-16 animate-spin rounded-full border-4 border-primary border-t-transparent" />
           </div>
-          <h2 className="text-xl font-bold text-slate-900">Analyzing your CV…</h2>
-          <p className="mx-auto mt-2 max-w-sm text-sm text-slate-500">
+          <h2 className="typography-hero-display font-bold text-slate-900">
+            Analyzing your CV…
+          </h2>
+          <p className="typography-body max-w-sm mx-auto mt-2" style={{ color: 'var(--color-body-muted)' }}>
             Our AI is comparing your CV against the job description. This usually takes 10–30 seconds.
           </p>
           <button
             onClick={() => requestRef.current?.abort()}
-            className="mt-6 rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-600 transition hover:bg-slate-100"
+            className="my-6 button-primary rounded-pill py-2.5 px-8 typography-body strong"
           >
             Cancel
           </button>
-        </div>
+        </section>
       </div>
     );
   }
@@ -79,19 +84,21 @@ export default function Dashboard() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-10">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight text-slate-900">Analyze your CV</h1>
-        <p className="mt-2 text-slate-600">
-          Upload your CV, paste the job you&apos;re targeting, and get an AI-powered match report.
+        <h1 className="typography-hero-display font-bold text-slate-900">
+          Analyze your CV
+        </h1>
+        <p className="typography-body mt-2" style={{ color: 'var(--color-body-muted)' }}>
+          Upload your CV, paste the job you're targeting, and get an AI-powered match report.
         </p>
       </div>
 
-      <div className="mb-6 flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="mb-6 rounded-none border border-border-soft bg-canvas p-8" style={{ letterSpacing: '-0.374px' }}>
         {currentTemplate ? (
-          <div className="w-12 shrink-0 overflow-hidden rounded-md border border-slate-200">
+          <div className="w-12 shrink-0 overflow-hidden rounded-none border border-border-soft">
             <TemplatePreview template={currentTemplate} />
           </div>
         ) : (
-          <div className="flex h-14 w-12 shrink-0 items-center justify-center rounded-md border border-dashed border-slate-300 text-base">
+          <div className="flex h-14 w-12 shrink-0 items-center justify-center rounded-none border border-dashed border-border-soft text-sm">
             📄
           </div>
         )}
@@ -99,13 +106,13 @@ export default function Dashboard() {
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-400">
             Your template
           </p>
-          <p className="truncate font-semibold text-slate-900">
+          <p className="truncate font-bold text-slate-900">
             {currentTemplate ? currentTemplate.name : 'None selected'}
           </p>
         </div>
         <Link
           to="/templates"
-          className="shrink-0 rounded-lg border border-slate-300 px-3.5 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100"
+          className="rounded-lg border border-border-soft px-3.5 py-2 typography-button-utility text-slate-700 transition hover:bg-slate-200"
         >
           {currentTemplate ? 'Change' : 'Choose one'}
         </Link>
@@ -122,17 +129,21 @@ export default function Dashboard() {
 
       <form onSubmit={handleScan} className="space-y-6">
         <div>
-          <label className="mb-2 block text-sm font-semibold text-slate-700">
+          <label className="mb-2 block typography-body strong">
             1. Your CV{' '}
-            <span className="font-normal text-slate-400">(PDF, DOCX, PNG/JPG image or TXT · max 10 MB)</span>
+            <span className="font-normal text-slate-400">
+              (PDF, DOCX, PNG/JPG image or TXT · max 10 MB)
+            </span>
           </label>
           <FileUploader file={file} onChange={setFile} onError={setError} />
         </div>
 
         <div>
-          <label htmlFor="jd" className="mb-2 block text-sm font-semibold text-slate-700">
+          <label htmlFor="jd" className="mb-2 block typography-body strong">
             2. Target job description{' '}
-            <span className="font-normal text-slate-400">({jobDescription.trim().length} chars)</span>
+            <span className="font-normal text-slate-400">
+              ({jobDescription.trim().length} chars)
+            </span>
           </label>
           <textarea
             id="jd"
@@ -140,14 +151,14 @@ export default function Dashboard() {
             value={jobDescription}
             onChange={(e) => setJobDescription(e.target.value)}
             placeholder="Paste the full job posting here — responsibilities, requirements, preferred skills…"
-            className="w-full resize-y rounded-2xl border border-slate-300 bg-white p-4 text-sm leading-relaxed outline-none transition focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100"
+            className="w-full rounded-none border border-border-soft bg-white p-4 text-sm leading-relaxed outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/10"
           />
         </div>
 
         <button
           type="submit"
           disabled={!file || jobDescription.trim().length < MIN_JD_LENGTH}
-          className="w-full rounded-2xl bg-indigo-600 py-3.5 text-base font-semibold text-white shadow-lg shadow-indigo-200 transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none"
+          className="w-full rounded-none button-primary rounded-pill py-3.5 typography-body strong"
         >
           Analyze my CV ✨
         </button>

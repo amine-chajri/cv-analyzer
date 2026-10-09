@@ -1,20 +1,9 @@
-/**
- * Circular SVG gauge for the 0-100 match score.
- * Color shifts from red -> amber -> green as the score increases.
- */
 const RADIUS = 54;
 const CIRCUMFERENCE = 2 * Math.PI * RADIUS;
-
-const getColor = (score) => {
-  if (score >= 75) return '#16a34a'; // green-600
-  if (score >= 50) return '#d97706'; // amber-600
-  return '#dc2626'; // red-600
-};
 
 export default function ScoreGauge({ score }) {
   const clamped = Math.max(0, Math.min(100, Math.round(score)));
   const offset = CIRCUMFERENCE * (1 - clamped / 100);
-  const color = getColor(clamped);
 
   return (
     <div className="flex flex-col items-center">
@@ -33,7 +22,7 @@ export default function ScoreGauge({ score }) {
             cy="64"
             r={RADIUS}
             fill="none"
-            stroke={color}
+            stroke="#0066cc"
             strokeWidth="10"
             strokeLinecap="round"
             strokeDasharray={CIRCUMFERENCE}
@@ -42,15 +31,15 @@ export default function ScoreGauge({ score }) {
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-4xl font-bold" style={{ color }}>
+          <span className="text-4xl font-bold" style={{ color: '#0066cc' }}>
             {clamped}
           </span>
-          <span className="text-xs font-medium uppercase tracking-wide text-slate-500">
+          <span className="text-xs font-medium uppercase tracking-wide" style={{ color: 'var(--color-body-muted)' }}>
             out of 100
           </span>
         </div>
       </div>
-      <p className="mt-2 text-sm font-medium text-slate-600">
+      <p className="mt-2 text-sm font-medium" style={{ color: 'var(--color-ink)' }}>
         {clamped >= 75
           ? 'Strong match 🎉'
           : clamped >= 50
